@@ -70,10 +70,3 @@ O script executa as células em ordem num kernel Jupyter novo, com o CSV **baixa
 ## Reprodução no código original
 
 `python evidencias/reproduzir_original.py <notebook original> menu.csv`, com o notebook de `f2b4553` obtido por `git show`: **19 de 19** comportamentos reproduzidos (`evidencias/reproducao_original_saida.txt`).
-
-## Não executado
-
-| O quê | Por quê |
-|---|---|
-| Fluxo no Colab pelo Chrome | Ferramentas do plugin indisponíveis nesta sessão (ver `COLAB_EXECUCAO.md` para o roteiro manual) |
-| `gpt-6-luna` real | Sem credencial e sem autorização de consumo |
