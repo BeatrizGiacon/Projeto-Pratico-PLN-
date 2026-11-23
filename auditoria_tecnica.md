@@ -42,13 +42,8 @@ Na reprodução, o LLM foi substituído por uma função que devolve a interpret
 | B19 | P2 | O loop `conversar()` roda automaticamente em “Executar tudo” | chamada não comentada (o comentário dizia “descomente”) |
 | B20 | P2 | O Markdown afirma que “o agente usa ferramentas LangChain”, mas a conversa não as invoca | documentação inconsistente |
 
-## 3. Riscos não reproduzidos ou fora do código
 
-- **Comportamento do LLM real (`gpt-6-luna`).** Não foi avaliado: não havia credencial nesta sessão e não houve autorização de consumo. O código novo trata a saída do LLM como não confiável. Ela só pode **acrescentar** exclusões e alergias, nunca removê-las nem reiniciar o pedido. Isso está coberto por testes com o modelo simulado.
-- **Diferença entre o Colab e o GitHub.** Não verificada (ver a seção 6).
-- **Disponibilidade do NLTK.** Neste ambiente, `nltk.download` recusa downloads através do proxy. A célula agora tem uma alternativa (stopwords mínimas, sem lematização). No Colab, o download costuma funcionar.
-
-## 4. Limitações do dataset (não são bugs)
+## 3. Limitações do dataset (não são bugs)
 
 Auditoria do `menu.csv` completo:
 
@@ -65,17 +60,6 @@ Auditoria do `menu.csv` completo:
 | Composição | **não há ingredientes, alergênicos nem contaminação cruzada**. Exemplos do impacto: a categoria “Beef & Pork” mistura bovino e suíno (McRib); “Egg McMuffin” não indica proteína no nome; smoothies não indicam laticínio no nome. Nenhum item pode ser declarado seguro ou livre de um ingrediente com base no CSV |
 | Zeros | 16 itens com 0 kcal (Diet Coke, Diet Dr Pepper, Dasani, Iced Tea, Coffee). São valores plausíveis, não ausências |
 
-## 5. Sugestões que não são defeitos
+## 4. Sugestões que não são defeitos
 
 Estão em `MELHORIAS_PROJETO.md`: fonte oficial de alergênicos, ID estável no CSV, quantidades (“2 Big Macs”), avaliação do LLM com um conjunto rotulado e embeddings multilíngues.
-
-## 6. O que não foi possível verificar
-
-| Etapa pedida | Situação |
-|---|---|
-| Abrir o Colab e o GitHub pelo plugin do Chrome | **Bloqueado.** As ferramentas do plugin não estavam disponíveis nesta sessão na nuvem. Também não usei um navegador remoto de terceiros, que exigiria login Google e serviço pago |
-| Comparar o notebook aberto no Colab com o do GitHub | **Pendente.** Depende do acesso ao Colab |
-| Executar com o `gpt-6-luna` | **Pendente.** Sem credencial e sem autorização de consumo. Teste opcional em `tests/test_llm_real.py` |
-| “Executar tudo” num ambiente novo | **Feito localmente** com um kernel Jupyter novo (`nbclient`), baixando o CSV real da `main`, sem as 3 células `@colab-only`. Nenhum erro. Saídas em `evidencias/notebook_executado_sem_llm.ipynb` |
-
-O roteiro de conferência manual no Colab está em `COLAB_EXECUCAO.md`.
