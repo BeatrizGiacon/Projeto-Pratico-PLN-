@@ -1,0 +1,83 @@
+(260, 24)
+Itens com nome repetido: 0
+Exemplo de busca: [('Premium McWrap Chicken & Ranch (Grilled Chicken)', 0.449), ('Premium McWrap Chicken & Bacon (Grilled Chicken)', 0.448), ('Premium McWrap Chicken & Ranch (Crispy Chicken)', 0.447), ('Premium McWrap Chicken & Bacon (Crispy Chicken)', 0.436), ('Premium McWrap Southwest Chicken (Crispy Chicken)', 0.432)]
+{'intencao': 'recomendar', 'consulta': 'frango', 'restricoes_informadas': True, 'prefere_frango': True, 'evita_carne_bovina': False, 'evita_frango': False, 'prefere_menos_sodio': True, 'prefere_menos_calorias': False, 'prefere_menos_acucar': False, 'prefere_mais_proteina': False, 'max_sodio_mg': 500.0, 'max_calorias': None, 'max_acucar_g': None, 'item_referido': None, 'pergunta': None, 'categoria_desejada': None, 'subtipo_lanche': None, 'alergias': [], 'sem_alergias': False, 'confirmou_risco_alergia': False}
+Coluna id_menu recriada com sucesso.
+Candidatos de exemplo:
+[ID 87] Premium Southwest Salad (without Chicken) — Salads; 140 kcal; sódio 150 mg; açúcar 6 g; proteína 6 g
+[ID 84] Premium Bacon Ranch Salad (without Chicken) — Salads; 140 kcal; sódio 300 mg; açúcar 4 g; proteína 9 g
+[ID 78] Chicken McNuggets (4 piece) — Chicken & Fish; 190 kcal; sódio 360 mg; açúcar 0 g; proteína 9 g
+Categorias originais: ['Beef & Pork', 'Beverages', 'Breakfast', 'Chicken & Fish', 'Coffee & Tea', 'Desserts', 'Salads', 'Smoothies & Shakes', 'Snacks & Sides']
+Grupos de navegação:
+Exemplo de lanches de frango:
+[ID 57] Premium Crispy Chicken Classic Sandwich — Chicken & Fish; 510 kcal; sódio 990 mg; açúcar 10 g; proteína 24 g
+[ID 58] Premium Grilled Chicken Classic Sandwich — Chicken & Fish; 350 kcal; sódio 820 mg; açúcar 8 g; proteína 28 g
+[ID 59] Premium Crispy Chicken Club Sandwich — Chicken & Fish; 670 kcal; sódio 1410 mg; açúcar 11 g; proteína 36 g
+[ID 60] Premium Grilled Chicken Club Sandwich — Chicken & Fish; 510 kcal; sódio 1250 mg; açúcar 9 g; proteína 40 g
+[ID 61] Premium Crispy Chicken Ranch BLT Sandwich — Chicken & Fish; 610 kcal; sódio 1400 mg; açúcar 11 g; proteína 32 g
+... e mais 17 produtos. Refine o tipo ou peça mais opções.
+Ferramentas disponíveis: ['consultar_menu', 'consultar_item_por_id']
+Assistente inicializado.
+[REPRODUZIDO] P0 restrição bovina
+    IDs recomendados: [42, 48, 49, 50, 51]; subtipo_atual='bovino'; categorias=['Beef & Pork']
+
+[REPRODUZIDO] Adição por ID ignora limite (ID 42, 530 kcal, limite 100)
+    Adicionado: Big Mac (ID 42).
+
+[REPRODUZIDO] Adição por ID ignora exclusão bovina (ID 48 Hamburger)
+    Adicionado: Hamburger (ID 48).
+
+[REPRODUZIDO] Ciência para visualizar reutilizada para adicionar (ID 49 Cheeseburger, alergia a leite)
+    Adicionado: Cheeseburger (ID 49).
+ATENÇÃO: o CSV não informa alergênicos, ingredientes completos nem contaminação cruzada. Não é possível afirmar que qualquer i
+
+[REPRODUZIDO] Preferência False não revoga
+    preferencias={'prefere_menos_sodio': True}
+
+[REPRODUZIDO] Preferência por frango persiste em bebidas
+    resposta: 'Não encontrei produtos que atendam aos critérios no CSV. Posso mudar a categoria ou flexibilizar os filtros.'; preferencias={'prefere_frango': True}
+
+[REPRODUZIDO] Filet-O-Fish (ID 83) classificado como frango
+    subtipo='frango'
+
+[REPRODUZIDO] Itens 'without Chicken' aparecem em busca por frango
+    ['Premium Bacon Ranch Salad (without Chicken)', 'Premium Southwest Salad (without Chicken)']
+
+[REPRODUZIDO] 'menos de 500' tratado como '<= 500'
+    itens com exatamente 500 kcal aceitos: ['Sausage, Egg & Cheese McGriddles with Egg Whites', 'McRib', 'Mocha (Large)']
+
+[REPRODUZIDO] Esquema aceita NaN/negativo
+    NaN aceito=True; negativo aceito=True
+
+[REPRODUZIDO] Referências inválidas interpretadas como ID
+    {'ID -1': 1, 'ID 1.5': 1, '2 no pedido': 2, 'quero o segundo': None}
+
+[REPRODUZIDO] 'quero o segundo' não seleciona a 2ª opção
+    resultado=None
+
+[REPRODUZIDO] Lista anterior continua ativa após consulta sem resultados
+    resposta='Não encontrei produtos que atendam aos critérios no CSV. Posso mudar a categoria'; ultimas=[42, 43, 44, 45, 46]
+
+[REPRODUZIDO] Restrição nova não reavalia o pedido (ID 43 Quarter Pounder)
+    Encontrei estas opções do menu.csv:
+[ID 42] Big Mac — Beef & Pork; 530 kcal; sódio 960 mg; açúcar 9 g; proteína 24 g
+[ID
+
+[REPRODUZIDO] Consulta sem correspondência gera sugestões com escore 0
+    escores=[(0, 0.0), (1, 0.0), (2, 0.0)]
+
+[REPRODUZIDO] 'sem restrições' não persiste: pergunta de restrição repetida
+    Antes de recomendar, você tem alguma preferência, restrição nutricional ou alergia? Pode dizer "sem 
+
+[REPRODUZIDO] Pergunta de nutriente vira busca genérica
+    Encontrei estas opções do menu.csv:
+[ID 78] Chicken McNuggets (4 piece) — Chicken & Fish; 190 kcal; sódio 360 mg; açúcar
+
+[REPRODUZIDO] 'ver meu pedido' depende do LLM
+    TimeoutError propagado
+
+[REPRODUZIDO] Reordenar df sem reconstruir TF-IDF
+    nenhum erro levantado; resposta usa índices TF-IDF desalinhados: Encontrei estas opções do menu.csv:
+[ID 42] Big Mac — Beef & Pork; 530 kcal; sódio 960 mg; açúcar 9 
+
+Total reproduzidos: 19/19

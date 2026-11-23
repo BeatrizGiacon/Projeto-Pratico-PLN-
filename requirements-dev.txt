@@ -1,0 +1,14 @@
+# Dependências para rodar a suíte de testes localmente (o Colab instala as suas na primeira célula)
+pandas>=2.0
+numpy
+scikit-learn>=1.3
+pydantic>=2.7
+langchain-core>=0.3
+nltk>=3.8
+requests
+pytest>=8
+pytest-cov>=5
+# Opcional: executar o notebook num kernel novo (evidencias/executar_notebook_kernel.py)
+nbclient
+nbformat
+ipykernel
