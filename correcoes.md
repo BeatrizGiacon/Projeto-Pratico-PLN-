@@ -47,8 +47,6 @@ mensagem ─► analisar_mensagem (regras PT, sem LLM)
 
 | Item | Motivo |
 |---|---|
-| Verificação no Colab pelo Chrome | As ferramentas do plugin não estavam disponíveis nesta sessão. Roteiro manual em `COLAB_EXECUCAO.md` |
-| Avaliação com o `gpt-6-luna` real | Sem credencial e sem autorização de consumo. Teste opcional: `RUN_LLM_TESTS=1` |
 | Garantia de ausência de ingrediente ou alergênico | Impossível com este CSV. Exige uma fonte oficial de ingredientes (ver `MELHORIAS_PROJETO.md`) |
 
 ## Decisões conservadoras (e seu custo)
