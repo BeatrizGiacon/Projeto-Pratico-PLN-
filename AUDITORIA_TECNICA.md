@@ -3,8 +3,6 @@
 **Branch:** `leticia-freitas` · **Revisão auditada:** `f2b45535e01ba4e78bd4a1cb0275a69406cdf0b3`. É o merge do PR #1 da `main`, com notebook e `menu.csv` idênticos aos da `main` em `d33ffbbf2815e76ad3493a6ec648b679c422d7c2`.
 **Data:** 23/11/2026 · **Escopo:** `projeto_pln.ipynb` (26 células: Markdown, código e saídas salvas) e `menu.csv` (260 linhas).
 
-> Esta auditoria foi refeita do zero nesta execução. Os achados da auditoria local anterior, que nunca foi publicada, entraram apenas como **hipóteses** e foram reproduzidos no código antes de serem tratados como confirmados. A reprodução está em `evidencias/reproduzir_original.py`, com a saída em `evidencias/reproducao_original_saida.txt`.
-
 ## 1. Estado encontrado
 
 | Item | Valor observado |
